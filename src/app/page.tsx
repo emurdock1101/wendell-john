@@ -453,6 +453,33 @@ export default function Home() {
             </p>
           </div>
         </div>
+
+        {/* Abhors list */}
+        <div className="max-w-md mx-auto mt-12">
+          <div className="bg-gray-950 border border-gray-800/20 rounded-xl p-8">
+            <h3 className="font-gothic text-2xl text-gray-500 mb-6 text-center">
+              ⚰️ Abhors
+            </h3>
+            <ul className="space-y-3 font-serif text-gray-500">
+              {[
+                "Dogs",
+                "Coffee",
+                "\"Live, Laugh, Love\" signs",
+                "\"But First, Coffee\" mugs",
+                "\"Good Vibes Only\" wall art",
+                "\"It's Wine O'Clock Somewhere\"",
+                "Food without sauce",
+                "Modern Sonic games",
+                "Short walks",
+                "Being asked about the hair situation",
+              ].map((item, i) => (
+                <li key={i} className="flex items-center gap-2 line-through decoration-red-900/40">
+                  <span className="text-gray-700">✗</span> {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
       </section>
 
       <OrnamentDivider />
@@ -546,62 +573,6 @@ export default function Home() {
               <p className="text-gray-500 font-serif italic text-sm">{walk.note}</p>
             </div>
           ))}
-        </div>
-      </section>
-
-      <OrnamentDivider />
-
-      {/* ── THINGS JOHN LOVES vs HATES ── */}
-      <section className="relative z-20 py-16 px-4">
-        <div className="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="bg-gray-950 border border-red-900/20 rounded-xl p-8">
-            <h3 className="font-gothic text-2xl text-red-700 mb-6 text-center">
-              🩸 Embraces
-            </h3>
-            <ul className="space-y-3 font-serif text-gray-400">
-              {[
-                "Sauce (all forms, all surfaces)",
-                "Latin ballroom dancing",
-                "Pokémon Go (nocturnal raids)",
-                "Global warming (pro)",
-                "Wheatley (his favorite \"animal\")",
-                "Sonic Adventure 2",
-                "Gears of War (chainsaw bayonet)",
-                "Long long walks",
-                "Snacking at 3 AM",
-                "Being bald (you can't tell though)",
-                "Speed (of all kinds)",
-                "Hot Cheetos",
-              ].map((item, i) => (
-                <li key={i} className="flex items-center gap-2">
-                  <span className="text-red-800">✦</span> {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="bg-gray-950 border border-gray-800/20 rounded-xl p-8">
-            <h3 className="font-gothic text-2xl text-gray-500 mb-6 text-center">
-              ⚰️ Abhors
-            </h3>
-            <ul className="space-y-3 font-serif text-gray-500">
-              {[
-                "Dogs",
-                "Coffee",
-                "\"Live, Laugh, Love\" signs",
-                "\"But First, Coffee\" mugs",
-                "\"Good Vibes Only\" wall art",
-                "\"It's Wine O'Clock Somewhere\"",
-                "Food without sauce",
-                "Modern Sonic games",
-                "Short walks",
-                "Being asked about the hair situation",
-              ].map((item, i) => (
-                <li key={i} className="flex items-center gap-2 line-through decoration-red-900/40">
-                  <span className="text-gray-700">✗</span> {item}
-                </li>
-              ))}
-            </ul>
-          </div>
         </div>
       </section>
 
