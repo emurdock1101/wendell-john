@@ -266,27 +266,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── QUICK STATS ── */}
-      <section className="relative z-20 py-16 px-4">
-        <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
-          {[
-            { icon: "⚡", label: "Top Speed", value: <><SpeedStat /> <span className="text-gray-600 text-sm">mph</span></>, sub: "(on foot, allegedly)" },
-            { icon: "🫙", label: "Sauces Applied Today", value: <span className="text-red-600 font-gothic">{mounted ? Math.floor(Math.random() * 8) + 5 : "—"}</span>, sub: "and counting" },
-            { icon: "⚫", label: "Pokémon Caught", value: <PokemonCounter />, sub: "in the eternal darkness" },
-            { icon: "🚶", label: "Lifetime Miles", value: <span className="text-red-600 font-gothic">{mounted ? (Math.floor(Math.random() * 3000) + 5000).toLocaleString() : "—"}</span>, sub: "mostly at night" },
-          ].map((stat, i) => (
-            <div key={i} className="bg-gray-950 border border-gray-800/50 rounded-xl p-6 text-center animate-pulse-red" style={{ animationDelay: `${i * 0.5}s` }}>
-              <div className="text-3xl mb-2">{stat.icon}</div>
-              <div className="text-gray-500 text-xs uppercase tracking-widest mb-2">{stat.label}</div>
-              <div className="text-2xl font-bold">{stat.value}</div>
-              <div className="text-gray-600 text-xs mt-1 font-serif italic">{stat.sub}</div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <OrnamentDivider />
-
       {/* ── ABOUT ── */}
       <section className="relative z-20 py-16 px-4">
         <h2 className="font-gothic text-3xl md:text-5xl text-center text-gray-200 mb-4">
