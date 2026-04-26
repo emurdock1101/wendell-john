@@ -69,6 +69,55 @@ function Fog() {
   );
 }
 
+/* ── Smoke wisps ── */
+function Smoke() {
+  const [wisps, setWisps] = useState<{ id: number; left: number; bottom: number; delay: number; size: number }[]>([]);
+  useEffect(() => {
+    setWisps(
+      Array.from({ length: 10 }, (_, i) => ({
+        id: i,
+        left: Math.random() * 100,
+        bottom: Math.random() * 30,
+        delay: Math.random() * -8,
+        size: 60 + Math.random() * 100,
+      }))
+    );
+  }, []);
+  return (
+    <div className="fixed inset-0 pointer-events-none z-5 overflow-hidden">
+      {wisps.map((w) => (
+        <div
+          key={w.id}
+          className="absolute rounded-full bg-gray-500 blur-3xl animate-smoke"
+          style={{
+            left: `${w.left}%`,
+            bottom: `${w.bottom}%`,
+            width: `${w.size}px`,
+            height: `${w.size}px`,
+            animationDelay: `${w.delay}s`,
+            animationDuration: `${7 + Math.random() * 6}s`,
+          }}
+        />
+      ))}
+      {/* Large drifting cloud layers */}
+      {[0, 1, 2].map((i) => (
+        <div
+          key={`cloud-${i}`}
+          className="absolute rounded-full bg-gray-700 blur-[80px] animate-cloud-drift"
+          style={{
+            bottom: `${5 + i * 8}%`,
+            left: `${10 + i * 25}%`,
+            width: `${300 + i * 100}px`,
+            height: `${80 + i * 30}px`,
+            animationDelay: `${i * 10}s`,
+            animationDuration: `${25 + i * 8}s`,
+          }}
+        />
+      ))}
+    </div>
+  );
+}
+
 /* ── Floating particles ── */
 function Particles() {
   const [particles, setParticles] = useState<{ id: number; left: number; delay: number; size: number }[]>([]);
@@ -191,14 +240,15 @@ export default function Home() {
       <Bats />
       <BloodDrips />
       <Fog />
+      <Smoke />
       <Particles />
 
       {/* ── HERO ── */}
       <section className="relative min-h-screen flex flex-col items-center justify-center text-center px-4">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(60,0,0,0.15)_0%,rgba(10,10,10,1)_70%)]" />
         <div className="relative z-20">
-          <div className="text-red-900/40 text-sm font-serif italic tracking-[0.3em] uppercase mb-6">
-            Get to know
+          <div className="text-red-500 text-sm font-serif italic tracking-[0.3em] uppercase mb-6">
+            From the shadows, he emerges
           </div>
           <h1 className="font-gothic text-5xl md:text-8xl font-black text-gray-100 tracking-wider animate-flicker">
             John Wendell
@@ -217,7 +267,14 @@ export default function Home() {
               </span>
             ))}
           </div>
-          <div className="mt-12 animate-bounce text-gray-600 text-2xl">↓</div>
+          <a
+            href="/gallery"
+            className="mt-8 inline-block bg-red-900/30 hover:bg-red-900/50 border border-red-900/40 text-gray-300 font-serif px-6 py-3 rounded-full transition-all duration-300 hover:scale-105"
+          >
+            📸 Enter the Gallery
+          </a>
+
+          <div className="mt-8 animate-bounce text-gray-600 text-2xl">↓</div>
         </div>
       </section>
 
@@ -334,9 +391,9 @@ export default function Home() {
 
           {/* Pokémon Go */}
           <div className="bg-gray-950 border border-gray-800/50 rounded-xl p-8 hover:border-red-900/30 transition-all duration-500">
-            <div className="text-4xl mb-4">⚫</div>
+            <div className="text-4xl mb-4">😈</div>
             <h3 className="font-gothic text-2xl text-gray-200 mb-3">
-              The Trainer
+              The Hunt
             </h3>
             <p className="text-gray-400 font-serif leading-relaxed">
               While lesser trainers sleep, John stalks the digital wilds.
