@@ -628,22 +628,6 @@ export default function Home() {
 
       <OrnamentDivider />
 
-      {/* ── CLOSING QUOTE ── */}
-      <section className="relative z-20 py-20 px-4 text-center">
-        <div className="max-w-2xl mx-auto">
-          <div className="text-6xl text-red-900/30 font-gothic">&ldquo;</div>
-          <p className="text-2xl md:text-3xl text-gray-300 font-serif italic leading-relaxed -mt-6">
-            I&rsquo;m not lost. I&rsquo;m just on a really long walk
-            and there&rsquo;s a Snorlax three blocks away.
-            Also, do you have any sauce? And no, I&rsquo;m not bald.
-            You can&rsquo;t even tell.
-          </p>
-          <div className="mt-6 text-gray-600 font-serif">
-            — John Wendell Murdock, 2:47 AM, somewhere
-          </div>
-        </div>
-      </section>
-
       {/* ── FOOTER ── */}
       <footer className="relative z-20 border-t border-gray-800/30 py-10 px-4 text-center">
         <div className="text-3xl mb-4">🧛💻⚡🫙💃🎮🍿🚶⚫🌡️</div>
