@@ -47,7 +47,7 @@ export default function GalleryPage() {
               <img
                 src={`/gallery/${i + 1}.png`}
                 alt={`John Wendell Murdock — Photo ${i + 1}`}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 relative z-10"
+                className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-110 relative z-10"
               />
 
               {/* Dark overlay on hover */}
