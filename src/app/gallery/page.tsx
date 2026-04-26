@@ -41,10 +41,10 @@ export default function GalleryPage() {
             onClick={() => setSelectedImage(9)}
           >
             {/* Ornate gold corners */}
-            <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-yellow-500/60 rounded-tl-2xl z-30" />
-            <div className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-yellow-500/60 rounded-tr-2xl z-30" />
-            <div className="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-yellow-500/60 rounded-bl-2xl z-30" />
-            <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-yellow-500/60 rounded-br-2xl z-30" />
+            <div className="absolute top-1 left-1 w-10 h-10 border-t-3 border-l-3 border-yellow-400 z-30" />
+            <div className="absolute top-1 right-1 w-10 h-10 border-t-3 border-r-3 border-yellow-400 z-30" />
+            <div className="absolute bottom-1 left-1 w-10 h-10 border-b-3 border-l-3 border-yellow-400 z-30" />
+            <div className="absolute bottom-1 right-1 w-10 h-10 border-b-3 border-r-3 border-yellow-400 z-30" />
 
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
@@ -59,7 +59,7 @@ export default function GalleryPage() {
                 💕 Nancy 💕
               </p>
               <p className="text-gray-400 font-serif italic text-sm">
-                John&rsquo;s Girlfriend
+                John&rsquo;s Girlfriend — <span className="text-pink-300">Normal</span> Type
               </p>
             </div>
 
