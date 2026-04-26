@@ -208,10 +208,10 @@ export default function Home() {
           <p className="mt-6 text-gray-400 font-serif text-xl max-w-xl mx-auto leading-relaxed italic">
             Software engineer. Speed demon. Sauce connoisseur.
             <br />
-            Pokémon trainer. Nocturnal walker. Eternal snacker.
+            Latin dancer. Pokémon trainer. Pro-warming advocate.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3 text-sm">
-            {["💻 Engineer", "⚡ Fast", "🫙 Sauce", "🍿 Snacks", "🚶 Walks", "⚫ Pokémon"].map((tag) => (
+            {["💻 Engineer", "⚡ Fast", "🫙 Sauce", "💃 Dancer", "🍿 Snacks", "🚶 Walks", "⚫ Pokémon", "🌡️ Pro-Warming", "🎮 Gamer"].map((tag) => (
               <span key={tag} className="bg-red-950/40 border border-red-900/30 text-gray-400 px-4 py-1.5 rounded-full font-serif">
                 {tag}
               </span>
@@ -346,6 +346,88 @@ export default function Home() {
               with sauce on his fingers.
             </p>
           </div>
+
+          {/* Dancing */}
+          <div className="bg-gray-950 border border-gray-800/50 rounded-xl p-8 hover:border-red-900/30 transition-all duration-500">
+            <div className="text-4xl mb-4">💃</div>
+            <h3 className="font-gothic text-2xl text-gray-200 mb-3">
+              The Dancer
+            </h3>
+            <p className="text-gray-400 font-serif leading-relaxed">
+              John is a <span className="text-red-400">very talented</span> Latin
+              ballroom dancer. Zouk. Salsa. Bachata. Tango. He glides across the
+              floor with the same unsettling speed he applies to everything else.
+              One moment he&rsquo;s standing still — the next he&rsquo;s mid-dip,
+              partner airborne, the room silent with awe. All while bald.
+              But you can&rsquo;t really tell.
+            </p>
+          </div>
+
+          {/* Global Warming */}
+          <div className="bg-gray-950 border border-gray-800/50 rounded-xl p-8 hover:border-red-900/30 transition-all duration-500">
+            <div className="text-4xl mb-4">🌡️</div>
+            <h3 className="font-gothic text-2xl text-gray-200 mb-3">
+              The Hot Take
+            </h3>
+            <p className="text-gray-400 font-serif leading-relaxed">
+              John believes in global warming. He is also{" "}
+              <span className="text-red-400">in favor of it</span>.
+              His reasoning is his own. He does not elaborate. When pressed,
+              he simply says &ldquo;I like warm&rdquo; and applies more hot
+              sauce to whatever he&rsquo;s eating. Scientists are baffled.
+              John is comfortable.
+            </p>
+          </div>
+
+          {/* Wheatley */}
+          <div className="bg-gray-950 border border-gray-800/50 rounded-xl p-8 hover:border-red-900/30 transition-all duration-500">
+            <div className="text-4xl mb-4">🔵</div>
+            <h3 className="font-gothic text-2xl text-gray-200 mb-3">
+              The Favorite &ldquo;Animal&rdquo;
+            </h3>
+            <p className="text-gray-400 font-serif leading-relaxed">
+              When asked his favorite animal, John answers without hesitation:{" "}
+              <span className="text-red-400">Wheatley, from Portal 2</span>.
+              Wheatley is not an animal. He is a spherical AI personality core
+              with a British accent who nearly destroys a research facility.
+              John does not care. Wheatley is his favorite animal, and he will
+              not be taking further questions.
+            </p>
+          </div>
+
+          {/* Gaming */}
+          <div className="bg-gray-950 border border-gray-800/50 rounded-xl p-8 hover:border-red-900/30 transition-all duration-500">
+            <div className="text-4xl mb-4">🎮</div>
+            <h3 className="font-gothic text-2xl text-gray-200 mb-3">
+              The Gamer
+            </h3>
+            <p className="text-gray-400 font-serif leading-relaxed">
+              John&rsquo;s gaming taste is specific and non-negotiable:{" "}
+              <span className="text-red-400">old 3D Sonic platformers</span> and{" "}
+              <span className="text-red-400">Gears of War</span>. That&rsquo;s it.
+              Sonic Adventure 2? A masterpiece. Gears of War? Poetry with a
+              chainsaw bayonet. Modern games? He&rsquo;ll play them, but he&rsquo;ll
+              compare them unfavorably to running through Green Hill Zone at
+              max speed while chainsawing a Locust. As one does.
+            </p>
+          </div>
+
+          {/* Hates */}
+          <div className="bg-gray-950 border border-gray-800/50 rounded-xl p-8 hover:border-red-900/30 transition-all duration-500">
+            <div className="text-4xl mb-4">🚫</div>
+            <h3 className="font-gothic text-2xl text-gray-200 mb-3">
+              The Aversions
+            </h3>
+            <p className="text-gray-400 font-serif leading-relaxed">
+              John does not like <span className="text-red-400">dogs</span>.
+              He does not like <span className="text-red-400">coffee</span>.
+              And he <em>especially</em> does not like signs that say things
+              like <span className="text-gray-500 line-through">&ldquo;Live, Laugh, Love&rdquo;</span> or{" "}
+              <span className="text-gray-500 line-through">&ldquo;But First, Coffee&rdquo;</span>.
+              If you hang one of those in your home, he will see it. He will
+              judge you. He will say nothing. But you will feel it.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -445,6 +527,62 @@ export default function Home() {
 
       <OrnamentDivider />
 
+      {/* ── THINGS JOHN LOVES vs HATES ── */}
+      <section className="relative z-20 py-16 px-4">
+        <div className="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="bg-gray-950 border border-red-900/20 rounded-xl p-8">
+            <h3 className="font-gothic text-2xl text-red-700 mb-6 text-center">
+              🩸 Embraces
+            </h3>
+            <ul className="space-y-3 font-serif text-gray-400">
+              {[
+                "Sauce (all forms, all surfaces)",
+                "Latin ballroom dancing",
+                "Pokémon Go (nocturnal raids)",
+                "Global warming (pro)",
+                "Wheatley (his favorite \"animal\")",
+                "Sonic Adventure 2",
+                "Gears of War (chainsaw bayonet)",
+                "Long long walks",
+                "Snacking at 3 AM",
+                "Being bald (you can't tell though)",
+                "Speed (of all kinds)",
+                "Hot Cheetos",
+              ].map((item, i) => (
+                <li key={i} className="flex items-center gap-2">
+                  <span className="text-red-800">✦</span> {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="bg-gray-950 border border-gray-800/20 rounded-xl p-8">
+            <h3 className="font-gothic text-2xl text-gray-500 mb-6 text-center">
+              ⚰️ Abhors
+            </h3>
+            <ul className="space-y-3 font-serif text-gray-500">
+              {[
+                "Dogs",
+                "Coffee",
+                "\"Live, Laugh, Love\" signs",
+                "\"But First, Coffee\" mugs",
+                "\"Good Vibes Only\" wall art",
+                "\"It's Wine O'Clock Somewhere\"",
+                "Food without sauce",
+                "Modern Sonic games",
+                "Short walks",
+                "Being asked about the hair situation",
+              ].map((item, i) => (
+                <li key={i} className="flex items-center gap-2 line-through decoration-red-900/40">
+                  <span className="text-gray-700">✗</span> {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <OrnamentDivider />
+
       {/* ── CLOSING QUOTE ── */}
       <section className="relative z-20 py-20 px-4 text-center">
         <div className="max-w-2xl mx-auto">
@@ -452,7 +590,8 @@ export default function Home() {
           <p className="text-2xl md:text-3xl text-gray-300 font-serif italic leading-relaxed -mt-6">
             I&rsquo;m not lost. I&rsquo;m just on a really long walk
             and there&rsquo;s a Snorlax three blocks away.
-            Also, do you have any sauce?
+            Also, do you have any sauce? And no, I&rsquo;m not bald.
+            You can&rsquo;t even tell.
           </p>
           <div className="mt-6 text-gray-600 font-serif">
             — John Wendell Murdock, 2:47 AM, somewhere
@@ -462,18 +601,19 @@ export default function Home() {
 
       {/* ── FOOTER ── */}
       <footer className="relative z-20 border-t border-gray-800/30 py-10 px-4 text-center">
-        <div className="text-3xl mb-4">🧛💻⚡🫙🍿🚶⚫</div>
+        <div className="text-3xl mb-4">🧛💻⚡🫙💃🎮🍿🚶⚫🌡️</div>
         <p className="font-gothic text-gray-400 text-lg">
           John Wendell Murdock
         </p>
         <p className="text-gray-600 text-sm mt-1 font-serif italic">
-          Software Engineer &bull; Speed Demon &bull; Sauce Enthusiast
+          Software Engineer &bull; Speed Demon &bull; Sauce Enthusiast &bull; Latin Dancer
           <br />
-          Walker of Paths &bull; Eater of Snacks &bull; Catcher of Pokémon
+          Walker of Paths &bull; Eater of Snacks &bull; Catcher of Pokémon &bull; Not Bald (You Can&rsquo;t Tell)
         </p>
         <p className="text-gray-800 text-xs mt-6">
           © {new Date().getFullYear()} &bull; Built in darkness &bull;
-          No Pokémon were harmed &bull; Sauce was applied liberally
+          No Pokémon were harmed &bull; Sauce was applied liberally &bull;
+          No &ldquo;Live Laugh Love&rdquo; signs were used in the making of this website
         </p>
       </footer>
     </main>
