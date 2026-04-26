@@ -30,11 +30,49 @@ export default function GalleryPage() {
         <p className="text-gray-500 font-serif italic mt-3">
           Visual evidence of John Wendell Murdock&rsquo;s existence
         </p>
-        <p className="text-gray-700 text-xs mt-2">9 artifacts recovered</p>
+        <p className="text-gray-700 text-xs mt-2">10 artifacts recovered</p>
       </header>
 
+      {/* Nancy — Featured */}
+      <section className="relative z-20 max-w-5xl mx-auto px-4 pt-12 pb-6">
+        <div className="max-w-sm mx-auto">
+          <div
+            className="relative bg-gray-950 rounded-2xl overflow-hidden cursor-pointer border-2 border-pink-500/60 shadow-[0_0_30px_rgba(236,72,153,0.3),0_0_60px_rgba(236,72,153,0.15)] hover:shadow-[0_0_40px_rgba(236,72,153,0.5),0_0_80px_rgba(236,72,153,0.25)] transition-all duration-500 hover:scale-105 group"
+            onClick={() => setSelectedImage(9)}
+          >
+            {/* Ornate gold corners */}
+            <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-yellow-500/60 rounded-tl-2xl z-30" />
+            <div className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-yellow-500/60 rounded-tr-2xl z-30" />
+            <div className="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-yellow-500/60 rounded-bl-2xl z-30" />
+            <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-yellow-500/60 rounded-br-2xl z-30" />
+
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/gallery/chansey.png"
+              alt="Nancy — John's Girlfriend"
+              className="w-full aspect-square object-contain bg-pink-950/20 p-4 transition-transform duration-700 group-hover:scale-110"
+            />
+
+            {/* Label */}
+            <div className="absolute bottom-0 left-0 right-0 z-30 bg-gradient-to-t from-black/90 via-black/60 to-transparent p-4 text-center">
+              <p className="text-pink-400 font-gothic text-lg font-bold">
+                💕 Nancy 💕
+              </p>
+              <p className="text-gray-400 font-serif italic text-sm">
+                John&rsquo;s Girlfriend
+              </p>
+            </div>
+
+            {/* Hearts badge */}
+            <div className="absolute top-3 right-3 z-30 text-2xl animate-heartbeat">
+              💖
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Gallery Grid */}
-      <section className="relative z-20 max-w-5xl mx-auto px-4 py-12">
+      <section className="relative z-20 max-w-5xl mx-auto px-4 py-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {Array.from({ length: 9 }, (_, i) => (
             <div
@@ -78,12 +116,18 @@ export default function GalleryPage() {
           <div className="relative max-w-3xl max-h-[90vh] animate-fadeIn">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={`/gallery/${selectedImage + 1}.png`}
-              alt={`John Wendell Murdock — Photo ${selectedImage + 1}`}
-              className="max-h-[80vh] rounded-xl border-2 border-red-900/30 shadow-2xl object-contain"
+              src={selectedImage === 9 ? "/gallery/chansey.png" : `/gallery/${selectedImage + 1}.png`}
+              alt={selectedImage === 9 ? "Nancy — John's Girlfriend" : `John Wendell Murdock — Photo ${selectedImage + 1}`}
+              className={`max-h-[80vh] rounded-xl shadow-2xl object-contain ${
+                selectedImage === 9
+                  ? "border-2 border-pink-500/60 shadow-[0_0_40px_rgba(236,72,153,0.4)]"
+                  : "border-2 border-red-900/30"
+              }`}
             />
             <p className="text-center text-gray-400 font-serif italic mt-4 text-lg">
-              {CAPTIONS[selectedImage % CAPTIONS.length]}
+              {selectedImage === 9
+                ? "Nancy. The love of John's life. She's a Chansey. He doesn't see the issue."
+                : CAPTIONS[selectedImage % CAPTIONS.length]}
             </p>
             <button
               className="absolute -top-3 -right-3 w-10 h-10 bg-red-900 hover:bg-red-800 rounded-full text-white font-bold text-lg flex items-center justify-center transition-colors cursor-pointer"
@@ -93,13 +137,13 @@ export default function GalleryPage() {
             </button>
             <button
               className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-14 w-10 h-10 bg-gray-900/80 hover:bg-red-900/80 rounded-full text-white flex items-center justify-center transition-colors cursor-pointer"
-              onClick={(e) => { e.stopPropagation(); setSelectedImage((selectedImage - 1 + 9) % 9); }}
+              onClick={(e) => { e.stopPropagation(); setSelectedImage((selectedImage - 1 + 10) % 10); }}
             >
               ‹
             </button>
             <button
               className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-14 w-10 h-10 bg-gray-900/80 hover:bg-red-900/80 rounded-full text-white flex items-center justify-center transition-colors cursor-pointer"
-              onClick={(e) => { e.stopPropagation(); setSelectedImage((selectedImage + 1) % 9); }}
+              onClick={(e) => { e.stopPropagation(); setSelectedImage((selectedImage + 1) % 10); }}
             >
               ›
             </button>
