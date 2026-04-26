@@ -179,35 +179,23 @@ function SpeedStat() {
 /* ── Sauce opinions ── */
 const SAUCES = [
   { name: "Sriracha", verdict: "On eggs. On rice. On ice cream? Maybe.", rating: 5 },
-  { name: "Ranch", verdict: "The universal solvent.", rating: 5 },
   { name: "Hot Honey", verdict: "Changed his life. Won't shut up about it.", rating: 5 },
   { name: "Frank's RedHot", verdict: "Puts that on everything. Literally.", rating: 4 },
-  { name: "Soy Sauce", verdict: "Even on things that don't need it.", rating: 4 },
-  { name: "BBQ (any variety)", verdict: "A vehicle for the sauce is all food is.", rating: 5 },
-  { name: "Ketchup", verdict: "On steak? He's done it. No shame.", rating: 3 },
   { name: "Mystery Sauce (gas station)", verdict: "Refuses to read the label.", rating: 4 },
 ];
 
 /* ── Snack log ── */
 const SNACKS = [
   { name: "Hot Cheetos", time: "The Witching Hour", rating: "🦇🦇🦇🦇🦇" },
-  { name: "Gas Station Sushi", time: "3:00 AM", rating: "🦇🦇🦇" },
-  { name: "Trail Mix (picked out the M&Ms)", time: "Dusk", rating: "🦇🦇🦇🦇" },
-  { name: "Entire Sleeve of Oreos", time: "Midnight", rating: "🦇🦇🦇🦇🦇" },
-  { name: "Questionable Leftovers (sauced)", time: "The Hour of the Wolf", rating: "🦇🦇" },
-  { name: "String Cheese (contemplatively)", time: "2:47 AM", rating: "🦇🦇🦇🦇" },
   { name: "Handful of Shredded Cheese", time: "Standing Before the Fridge", rating: "🦇🦇🦇🦇🦇" },
-  { name: "Uncrustable (frozen, didn't wait)", time: "Twilight", rating: "🦇🦇🦇" },
+  { name: "Gas Station Sushi", time: "3:00 AM", rating: "🦇🦇🦇" },
 ];
 
 /* ── Walk log ── */
 const WALKS = [
   { route: "The Midnight Circuit", distance: "7.3 mi", note: "Caught a Gengar near the cemetery" },
-  { route: "The Fog Path", distance: "5.1 mi", note: "Three PokéStops along the river" },
   { route: "The Eternal Loop", distance: "11.2 mi", note: "Forgot where he parked" },
-  { route: "The Shadow Trail", distance: "8.8 mi", note: "Hatched 4 eggs, scared a jogger" },
   { route: "The Long Dark", distance: "13.6 mi", note: "Phone died at mile 9. Kept walking." },
-  { route: "Around the Block (got carried away)", distance: "6.4 mi", note: "Raided 3 gyms" },
 ];
 
 /* ── Pokémon counter ── */
